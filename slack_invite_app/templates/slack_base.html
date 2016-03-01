@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Join the {{ SLACK_TEAM_NAME }}community on Slack!!</title>
+
+<!-- for FF, Chrome, Opera -->
+<link rel="icon" type="image/png" href="{% static 'python16x16.png' %}" sizes="16x16">
+<link rel="icon" type="image/png" href="{% static 'python32x32.png' %}" sizes="32x32">
+
+<!-- for IE -->
+<link rel="icon" type="image/x-icon" href="{% static 'pythonicon.gif' %}" >
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'pythonicon.gif' %}"/>
+
+
+
+<link href="{% static 'slack_invite.css' %}" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic|Open+Sans:700italic,400,600,300,700,800" rel="stylesheet" type="text/css">
+
+</head>
+
+    <body>
+
+    {% block content %}
+    {% endblock content %}
+
+
+    </body>
+
+
+</html>

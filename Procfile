@@ -1,0 +1,1 @@
+web: gunicorn dcdojo_site.wsgi --log-file -

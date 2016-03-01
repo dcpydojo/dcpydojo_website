@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+    {% load static %}
+    {% block content %}
+
+  <body>
+
+    <div id="main">
+
+
+    <div class="divider"></div>
+      <div class="section">
+        <h4> What is the DC Python Dojo? </h4>
+        <p class="flow-text">
+        The dojo is meant to be an inclusive and encouraging environment where coders to get together and work on a programming challenge in small groups.
+      </p>
+      <p class="flow-text">
+
+        We work to make sure everyone can get involved and feels welcome. Pythonistas from all backgrounds should feel free to join us!
+      </p>
+ 
+      <h5>What it is:</h5>
+      <p class="flow-text"> 
+        <ul>
+          <li><i class="tiny material-icons">check</i>  A place to learn and experiment</li>
+          <li><i class="tiny material-icons">check</i>  A safe place to fail, pick yourself up, and try again</li>
+          <li><i class="tiny material-icons">check</i>  A time to enjoy coding outside of work / school</li>
+        </ul>
+      </p>
+      <h5>What it isn't:</h5>
+      <p class="flow-text"> 
+        <ul>
+          <li><i class="tiny material-icons">visibility_off</i>  A place for only expert programmers -- all levels welcome!</li>
+          <li><i class="tiny material-icons">visibility_off</i>  A place to take yourself too seriously</li>
+          <li><i class="tiny material-icons">visibility_off</i>  A chance to get help on a specific problem you've been working on (but do come to DC Python Office Hours for that!)</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+      <h4>Normal Dojo Schedule </h4>
+
+      <table class="responsive-table highlight">
+        <thead>
+          <tr>
+              <th data-field="time">Time</th>
+              <th data-field="activity">Activity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>6:30 - 7:30</td>
+            <td>Arrive, eat pizza, socialize</td>
+          </tr>
+          <tr>
+            <td>7:00ish</td>
+            <td>Vote on a coding challenge for the evening and divide into teams</td>
+          </tr>
+          <tr>
+            <td>7:15 -- 9:00</td>
+            <td>Work in teams to find a solution to the night's problem</td>
+          </tr>
+          <tr>
+            <td>9:00ish</td>
+            <td>Show & Tell</td>
+          </tr>
+            <tr>
+            <td>Afterwards</td>
+            <td>Some post-dojo beers!</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+
+    </div>
+
+    <div class="divider"></div>
+
+     
+    <h3>Past Dojo Projects</h3>
+      <p>Code for our previous projects can be found on <a href="http://github.com/dcpydojo">Github</a>, but here's a few we've worked on in the past:</p>
+      <ul>
+        <li>Weather Checker - Using weather forecasting APIs, create an app that will tell you if it's raining outside if you're stuck at your desk and can't get to the window.</li>
+        <li>Six Degrees of Kevin Bacon - Figure out a way to check if and how actors are linked to Kevin Bacon</li>
+        <li>Twitter Debate Reaction - Look at how to collect and alanyze Twitter reaction to a presidential debate in real time.</li>
+        <li>Dojo Check-in App - Build a Slack bot or app that would allow people to check in when they arrive at the dojo</li>
+      </ul>
+
+    <div class="divider"></div>
+
+    <h3 id='aboutus'>About the Dojo</h3>
+      <p>The DC Python Dojo started in July 2015 when a formerly UK-based programmer realized he missed the "London Rules" Python dojo and decided to start one here in DC along the same principles. It's a chance for programmers of all experience levels to work in small groups solving simple challenges using Python. We don't always find a solution, but the emphasis is on having fun while trying out new things in Python.</p>
+
+      <p>Have an idea for a dojo project? Bring it to the next dojo or <a href="mailto:dcpydojo@gmail.com">email it to us!</a></p>
+      
+      <img class="responsive-img" id="xkcd" src="http://imgs.xkcd.com/comics/python.png"/>
+
+    </div>
+    <!-- <img class="responsive-img" src='{% static  "img/linus.png" %}'/> -->
+    <!-- <img id="guido" class="responsive-img" src='{% static  "img/inguidowetrust.png" %}' />  -->
+  </body>
+
+{% endblock content %}
+
