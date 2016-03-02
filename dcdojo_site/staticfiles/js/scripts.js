@@ -6,20 +6,20 @@ $( document ).ready(function() {
 
 
 
-        $('input#ajax_form').on('click', function() { 
+        $('form#ajax_form').submit(function (e) { 
+            event.preventDefault();
             console.log("form submitted!"); 
 
-            var name = $('input[name="email"]').val();
+            var email = $('input[name="email"]').val();
             var csrf_token = $("input[name='csrfmiddlewaretoken']").val()
 
 
-            var post_data = {        'name': name, 
-
-                      'csrfmiddlewaretoken': csrf_token,
+            var post_data = {             'email': email, 
+                            'csrfmiddlewaretoken': csrf_token,
                            };
 
             console.log( post_data );
-            event.preventDefault();
+            
             create_post(post_data);
             return false;
 
@@ -36,6 +36,19 @@ $( document ).ready(function() {
                 // handle a successful response
                 success : function(data) { 
                     console.log("success"); // another sanity check
+                    console.log(data);
+                    console.log(data['ok']);
+                // if ok == true
+                    if (data['ok'] == true){
+                        $('div#slack_request_form').append('<div class="chip"> \
+                                Invite Sent  <i class="material-icons">close</i> </div>' 
+                                );
+                    
+                        $('form#ajax_form').remove();
+                    }
+                    else {
+                        $('div#slack_request_form').append('<p>' + 'Error: ' + data['error'] + '</p>');
+                    }
 
                 }
             });

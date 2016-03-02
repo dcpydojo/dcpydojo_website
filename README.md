@@ -7,3 +7,12 @@ Work-in progress
 
 1. Add stuff here
 2. Clean Up Slack Group Invite on main page
+
+
+
+## Config
+
+### Heroku Build Package
+
+heroku config:add BUILDPACK_URL=https://github.com/amanjain/heroku-buildpack-python-with-django-bower.git
+
