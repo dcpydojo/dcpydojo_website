@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 
 
-Inlcude this in your project urls.py 
+Inlcude this in your project urls.py
 
 url(r'^slack/', include('django_slack_invite.urls'))
 

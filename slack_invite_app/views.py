@@ -29,7 +29,7 @@ class SlackInvite(CreateView):
     """docstring for SlackInvite """
     template_name = 'slack_inviter.html'
     form_class = SlackInviteForm
-    success_url = reverse_lazy('slack_invite_success')
+    success_url = reverse_lazy('slack:slack_invite_success')
     model = SlackInviteRequest
 
     def post(self, request, *args, **kwargs):
@@ -54,7 +54,7 @@ class SlackInvite(CreateView):
             if context_object_name:
                 context[context_object_name] = self.object
         context.update(kwargs)
-        
+
 
         return super(ModelFormMixin, self).get_context_data(**context)
 
@@ -66,7 +66,7 @@ class SlackSuccess(TemplateView):
         context = self.get_context_data(**kwargs)
         context.update(slack_context)
         return self.render_to_response(context)
-      
+
 class SlackAjax(View):
     http_method_names = [u'post']
 
@@ -75,9 +75,7 @@ class SlackAjax(View):
         Custom method for listview
         """
         email = request.POST.get('email')
-      
+
         context = slack_api_invite_request(email, SLACK_TOKEN, SLACK_URL)
 
-        return HttpResponse(json.dumps(context), content_type = "application/json")  
-
-
+        return HttpResponse(json.dumps(context), content_type = "application/json")
