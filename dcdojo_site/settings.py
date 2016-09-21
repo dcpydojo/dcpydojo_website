@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = "4iqb#r5l84@56es^j)^gd&f@6h+)7=g=+qey!83mwqspg6$ld5"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Application definition
 
@@ -145,7 +145,7 @@ STATICFILES_FINDERS = [
 ]
 
 BOWER_COMPONENTS_ROOT = PROJECT_ROOT + '/components/'
- 
+
 
 BOWER_INSTALLED_APPS = (
     'foundation',
@@ -155,5 +155,4 @@ BOWER_INSTALLED_APPS = (
 ### Slack Invite Info
 SLACK_URL = 'https://dcpythondojo.slack.com' ### your slack team url (ex: dcpythondojo.slack.com)
 SLACK_TEAM_NAME = 'DC Python Dojo' ### your community or team name to display on join page.
-# SLACK_TOKEN = '' ### access token of slack. You can generate it in https://api.slack.com/web#auth. 
-
+# SLACK_TOKEN = '' ### access token of slack. You can generate it in https://api.slack.com/web#auth.
