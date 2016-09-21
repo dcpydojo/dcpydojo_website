@@ -29,7 +29,7 @@ class SlackInvite(CreateView):
     """docstring for SlackInvite """
     template_name = 'slack_inviter.html'
     form_class = SlackInviteForm
-    success_url = reverse_lazy('slack:slack_invite_success')
+    success_url = reverse_lazy('slack_invite_success')
     model = SlackInviteRequest
 
     def post(self, request, *args, **kwargs):

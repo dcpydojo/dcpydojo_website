@@ -9,6 +9,6 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', include('slack_invite_app.urls'), name='slack'),
+    url(r'^', include('slack_invite_app.urls'), name='slack'),
     url(r'^site', include('mainsite.urls')),
 ]
